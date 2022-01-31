@@ -1,7 +1,11 @@
+import './globals.css';
+
+import NavBar from "./components/NavBar/NavBar";
+
 export default function App() {
   return (
     <>
-      <h1>Insure Project Deploy</h1>
+      <NavBar />
     </>
   );
 };
