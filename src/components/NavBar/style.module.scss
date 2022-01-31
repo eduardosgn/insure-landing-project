@@ -3,3 +3,85 @@ $primaryGrayishBlue: hsl(216, 30%, 68%);
 $neutralVeryDarkViolet: hsl(270, 9%, 17%);
 $neutralDarkGreyishViolet: hsl(273, 4%, 51%);
 $neutralVeryLightGray: hsl(0, 0%, 98%);
+
+@mixin position($top, $right: $top, $bottom: $top, $left: $right) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+};
+
+.containerNav {
+    margin: 0 auto;
+    @include position(0, 0);
+    z-index: 99;
+    position: sticky;
+    padding: 1rem 2rem;
+    background: $neutralVeryLightGray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 30px;
+        }
+    }
+}
+
+.menuMobile {
+    background-image: url('../../public/bg-pattern-mobile-nav.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: $neutralVeryDarkViolet;
+    color: $neutralVeryLightGray;
+    position: fixed;
+    top: 20;
+    right: 0;
+    left: 0;
+    height: 100%;
+    transform: translateY(-120%);
+    transition: transform .5s ease-in-out;
+
+    ul {
+        list-style: none;
+        padding: 1rem 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+
+        li {
+            cursor: pointer;
+            padding-bottom: 15px;
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        #viewPlans {
+            border: $neutralVeryLightGray 3px solid;
+            padding: 1rem 0;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-color: $neutralVeryLightGray;
+                color: $neutralVeryDarkViolet;
+            }
+        }
+    }
+}
+
+.showMenu {
+    transform: translateY(0);
+}
