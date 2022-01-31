@@ -34,12 +34,21 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
             width: 30px;
         }
     }
+
+    .wrapperNavDesktop {
+        display: none;
+
+        .navDesktop {
+            display: none;
+        }
+    }
 }
 
 .menuMobile {
     background-image: url('../../public/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
+    background-size: 100%;
     background-color: $neutralVeryDarkViolet;
     color: $neutralVeryLightGray;
     position: fixed;
@@ -58,7 +67,6 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
 
         li {
             cursor: pointer;
-            padding-bottom: 15px;
 
             &:not(:last-child) {
                 margin-bottom: 3rem;
@@ -84,4 +92,28 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
 
 .showMenu {
     transform: translateY(0);
+}
+
+@media all and (min-width: 1000px) {
+    .containerNav {
+        padding: 1.5rem 4rem;
+
+        button {
+            display: none;
+        }
+
+        .wrapperNavDesktop {
+            display: inline;
+
+            .navDesktop {
+                display: flex;
+                list-style: none;
+                margin: 0;
+    
+                li {
+                    margin-left: 4rem;
+                }
+            }
+        }
+    }
 }

@@ -21,6 +21,15 @@ export default function NavBar() {
                 <button onClick={handleOpenNav}>
                     { openNav ? <img src={ CloseIcon } alt="" /> : <img src={ BurgerIcon } alt="" /> }
                 </button>
+
+                <nav className={ styles.wrapperNavDesktop }>
+                    <ul className={ styles.navDesktop }>
+                        <li>How we work</li>
+                        <li>Blog</li>
+                        <li>Account</li>
+                        <li id={ styles.viewPlans }>View Plans</li>
+                    </ul>
+                </nav>
             </section>
 
             <nav className={ openNav ? `${styles.menuMobile} ${styles.showMenu}` : `${styles.menuMobile}` }>
