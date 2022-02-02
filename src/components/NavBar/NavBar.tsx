@@ -15,7 +15,7 @@ export default function NavBar() {
 
     return (
         <>
-            <section className={styles.containerNav}>
+            <section className={ styles.containerNav }>
                 <div className={ styles.wrapperNav }>
                     <img src={ InsureLogo } alt="Insure" />
 
