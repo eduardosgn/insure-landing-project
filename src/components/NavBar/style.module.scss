@@ -16,30 +16,35 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
     @include position(0, 0);
     z-index: 99;
     position: sticky;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     background: $neutralVeryLightGray;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    button {
-        cursor: pointer;
-        background: none;
-        border: none;
+    .wrapperNav {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        max-width: 85%;
+        margin: 0 auto;
 
-        img {
-            width: 30px;
+        button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            img {
+                width: 30px;
+            }
         }
-    }
-
-    .wrapperNavDesktop {
-        display: none;
-
-        .navDesktop {
+    
+        .wrapperNavDesktop {
             display: none;
+    
+            .navDesktop {
+                display: none;
+            }
         }
     }
 }
@@ -51,19 +56,20 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
     background-size: 100%;
     background-color: $neutralVeryDarkViolet;
     color: $neutralVeryLightGray;
+    height: 100%;
     position: fixed;
     top: 20;
     right: 0;
     left: 0;
-    height: 100%;
     transform: translateY(-120%);
-    transition: transform .5s ease-in-out;
+    opacity: 0;
+    transition: all .5s ease-in-out;
 
     ul {
         list-style: none;
-        padding: 1rem 2rem;
         text-align: center;
         font-size: 1.5rem;
+        padding: 1rem 2rem;
 
         li {
             cursor: pointer;
@@ -91,29 +97,72 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
 }
 
 .showMenu {
+    opacity: 1;
     transform: translateY(0);
 }
 
 @media all and (min-width: 1000px) {
     .containerNav {
-        padding: 1.5rem 4rem;
+        padding: 1rem 0;
 
-        button {
-            display: none;
-        }
+        .wrapperNav {
+            max-width: 75%;
 
-        .wrapperNavDesktop {
-            display: inline;
-
-            .navDesktop {
-                display: flex;
-                list-style: none;
-                margin: 0;
+            button {
+                display: none;
+            }
     
-                li {
-                    margin-left: 4rem;
+            .wrapperNavDesktop {
+                display: inline;
+    
+                .navDesktop {
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+        
+                    li {
+                        cursor: pointer;
+                        margin-left: 4rem;
+                        letter-spacing: 1px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        &:not(:last-child) {
+                            color: $primaryGrayishBlue;
+                            text-transform: uppercase;
+                            transition: all .2s ease-in-out;
+
+                            &:hover {
+                                color: $neutralVeryDarkViolet;
+                            }
+                        }
+                    }
+
+                    #viewPlansDesktop {
+                        text-transform: uppercase;
+                        border: 2px solid $neutralVeryDarkViolet;
+                        padding: 8px 25px;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            background: $neutralVeryDarkViolet;
+                            color: $neutralVeryLightGray;
+                        }
+                    }
                 }
             }
+        }
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .containerNav {
+        .wrapperNav {
+            min-width: 65%;
         }
     }
 }

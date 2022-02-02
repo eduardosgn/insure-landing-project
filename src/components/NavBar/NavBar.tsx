@@ -16,20 +16,22 @@ export default function NavBar() {
     return (
         <>
             <section className={styles.containerNav}>
-                <img src={ InsureLogo } alt="Insure" />
+                <div className={ styles.wrapperNav }>
+                    <img src={ InsureLogo } alt="Insure" />
 
-                <button onClick={handleOpenNav}>
-                    { openNav ? <img src={ CloseIcon } alt="" /> : <img src={ BurgerIcon } alt="" /> }
-                </button>
+                    <button onClick={handleOpenNav}>
+                        { openNav ? <img src={ CloseIcon } alt="" /> : <img src={ BurgerIcon } alt="" /> }
+                    </button>
 
-                <nav className={ styles.wrapperNavDesktop }>
-                    <ul className={ styles.navDesktop }>
-                        <li>How we work</li>
-                        <li>Blog</li>
-                        <li>Account</li>
-                        <li id={ styles.viewPlans }>View Plans</li>
-                    </ul>
-                </nav>
+                    <nav className={ styles.wrapperNavDesktop }>
+                        <ul className={ styles.navDesktop }>
+                            <li>How we work</li>
+                            <li>Blog</li>
+                            <li>Account</li>
+                            <li id={ styles.viewPlansDesktop }>View Plans</li>
+                        </ul>
+                    </nav>
+                </div>
             </section>
 
             <nav className={ openNav ? `${styles.menuMobile} ${styles.showMenu}` : `${styles.menuMobile}` }>
