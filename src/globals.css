@@ -8,3 +8,20 @@ h1, h2, h3, h4, h5, h6 {
 p, a, button, form, ul {
     font-family: 'Karla', sans-serif;
 }
+
+.wrapper {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+@media all and (min-width: 1000px) {
+    .wrapper {
+        max-width: 75%;
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .wrapper {
+        max-width: 85%;
+    }
+}

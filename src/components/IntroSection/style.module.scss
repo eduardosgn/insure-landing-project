@@ -64,6 +64,8 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
 
 @media all and (min-width: 1000px) {
     .introHeader {
+        background: url(../../public/bg-pattern-intro-left-desktop.svg) no-repeat bottom left, url(../../public/bg-pattern-intro-right-desktop.svg) no-repeat top right;
+        background-color: $primaryDarkViolet;
         padding: 3rem 0;
 
         .wrapper {
@@ -105,11 +107,8 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
 
 @media all and (min-width: 1400px) {
     .introHeader {
-        background: url(../../public/bg-pattern-intro-left-desktop.svg) no-repeat bottom left, url(../../public/bg-pattern-intro-right-desktop.svg) no-repeat top right;
-        background-color: $primaryDarkViolet;
         padding: 4rem 0;
-
-
+        
         .wrapper {
             max-width: 65%;
 
