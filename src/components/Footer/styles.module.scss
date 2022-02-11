@@ -1,0 +1,74 @@
+$primaryDarkViolet: hsl(256, 26%, 20%);
+$primaryGrayishBlue: hsl(216, 30%, 68%);
+$neutralVeryDarkViolet: hsl(270, 9%, 17%);
+$neutralDarkGreyishViolet: hsl(273, 4%, 51%);
+$neutralVeryLightGray: hsl(0, 0%, 98%);
+
+.container {
+    background: url(../../public/bg-pattern-footer-mobile.svg) no-repeat top left;
+    background-size: 100%;
+    background-color: rgb(245, 245, 245);
+
+    .wrapper {
+        max-width: 85%;
+        margin: 0 auto;
+        padding: 5rem 0;
+
+        .socialLinks {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            border-bottom: 1px rgb(206, 206, 206) solid;
+
+            #socialIcons {
+                width: 40%;
+                margin: 2rem auto;
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    transition: all .2s ease-in-out;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .container {
+        background: url(../../public/bg-pattern-footer-desktop.svg) no-repeat top left;
+        background-color: rgb(245, 245, 245);
+
+        .wrapper {
+            max-width: 75%;
+
+            .socialLinks {
+                flex-direction: row;
+                padding-bottom: 2rem;
+
+                #socialIcons {
+                    margin: 0;
+                    justify-content: flex-end;
+                    
+                    a {
+                        padding-left: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .container {
+        .wrapper {
+            max-width: 65%;
+        }
+    }
+}
