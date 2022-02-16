@@ -1,5 +1,7 @@
 import styles from './styles.module.scss';
 
+import FooterLinks from '../FooterLinks/FooterLinks';
+
 import Logo from '../../public/logo.svg';
 import Facebook from '../../public/icon-facebook.svg';
 import Twitter from '../../public/icon-twitter.svg';
@@ -32,6 +34,8 @@ export default function Footer() {
                             </a>
                         </div>
                     </div>
+
+                    <FooterLinks />
                 </div>
             </div>
         </section>

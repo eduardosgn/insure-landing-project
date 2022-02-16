@@ -1,0 +1,53 @@
+$primaryDarkViolet: hsl(256, 26%, 20%);
+$primaryGrayishBlue: hsl(216, 30%, 68%);
+$neutralVeryDarkViolet: hsl(270, 9%, 17%);
+$neutralDarkGreyishViolet: hsl(273, 4%, 51%);
+$neutralVeryLightGray: hsl(0, 0%, 98%);
+
+.container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .linksList {
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                text-align: center;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                margin-bottom: .5rem;
+                color: $neutralVeryDarkViolet;
+
+                &:first-child {
+                    color: $primaryGrayishBlue;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .linksList {
+            ul {
+                list-style: none;
+                padding: 0;
+    
+                li {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
