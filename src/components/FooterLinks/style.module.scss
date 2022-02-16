@@ -17,6 +17,7 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
             padding: 0;
 
             li {
+                cursor: pointer;
                 text-align: center;
                 font-size: 14px;
                 font-weight: bold;
@@ -25,6 +26,7 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
                 color: $neutralVeryDarkViolet;
 
                 &:first-child {
+                    cursor: default;
                     color: $primaryGrayishBlue;
                     margin-bottom: 2rem;
                 }
