@@ -6,8 +6,7 @@ export default function Header() {
     return (
         <section className={ styles.containerHeader }>
             <div className={ styles.wrapperHeader }>
-                <div className={ styles.imageWrapperMobile } style={{ backgroundImage: `url(${FamilyImageMobile})` }}>
-                </div>
+                <div className={ styles.imageWrapperMobile } style={{ backgroundImage: `url(${FamilyImageMobile})` }}></div>
             </div>
         </section>
     );
