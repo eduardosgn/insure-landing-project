@@ -43,11 +43,9 @@ $neutralVeryLightGray: hsl(0, 0%, 98%);
 
         .linksList {
             ul {
-                list-style: none;
-                padding: 0;
-    
                 li {
                     font-size: 13px;
+                    text-align: left;
                 }
             }
         }
