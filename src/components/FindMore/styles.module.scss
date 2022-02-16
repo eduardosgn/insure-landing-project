@@ -1,0 +1,90 @@
+$primaryDarkViolet: hsl(256, 26%, 20%);
+$primaryGrayishBlue: hsl(216, 30%, 68%);
+$neutralVeryDarkViolet: hsl(270, 9%, 17%);
+$neutralDarkGreyishViolet: hsl(273, 4%, 51%);
+$neutralVeryLightGray: hsl(0, 0%, 98%);
+
+.container {
+    margin: 1rem 0 8rem 0;
+
+    .wrapper {
+        max-width: 85%;
+        margin: 0 auto;
+        background: url(../../public/bg-pattern-how-we-work-mobile.svg) no-repeat top right;
+        background-color: $primaryDarkViolet;
+        
+        .titleAndLink {
+            text-align: center;
+            padding: 4rem 2rem;
+
+            h2 {
+                font-size: 2.5rem;
+                margin: 0 0 4rem 0;
+                color: $neutralVeryLightGray;
+                font-weight: 500;
+            }
+
+            a {
+                text-decoration: none;
+                color: $neutralVeryLightGray;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border: 2px $neutralVeryLightGray solid;
+                padding: 1rem 3rem;
+                transition: all .2s ease-in-out;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: $neutralVeryLightGray;
+                    color: $neutralVeryDarkViolet;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .container {
+        .wrapper {
+            max-width: 75%;
+
+            .titleAndLink {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4rem 5rem;
+                
+                h2 {
+                    text-align: left;
+                    font-size: 3rem;
+                }
+
+                a {
+                    margin-left: 3rem;
+                    padding: 1rem 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .container {
+        .wrapper {
+            max-width: 65%;
+
+            .titleAndLink {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5rem;
+                
+                h2 {
+                    text-align: left;
+                    margin: 0 5rem 0 0;
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}

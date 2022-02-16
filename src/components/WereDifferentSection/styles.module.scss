@@ -1,0 +1,113 @@
+$primaryDarkViolet: hsl(256, 26%, 20%);
+$primaryGrayishBlue: hsl(216, 30%, 68%);
+$neutralVeryDarkViolet: hsl(270, 9%, 17%);
+$neutralDarkGreyishViolet: hsl(273, 4%, 51%);
+$neutralVeryLightGray: hsl(0, 0%, 98%);
+
+.container {
+   .wrapper {
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 6rem 0;
+
+      #divider {
+         width: 150px;
+         height: 2px;
+         background-color: $primaryGrayishBlue;
+         margin: 0 auto;
+      }
+
+      h2 {
+         text-align: center;
+         font-size: 2.6rem;
+      }
+
+      .cardWrapper {
+         display: flex;
+         flex-direction: column;
+
+         .card {
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h2 {
+               font-size: 1.7rem;
+               margin: 1.5rem 0;
+            }
+   
+            p {
+               text-align: center;
+               margin: 0;
+               line-height: 1.6;
+               color: $neutralDarkGreyishViolet;
+               font-size: 1.1rem;
+            }
+
+            &:last-child {
+               margin: 3rem 0 0 0;
+            }
+         }
+      }
+   }
+}
+
+@media all and (min-width: 1000px) {
+   .container {
+      .wrapper { 
+         max-width: 75%;
+
+         #divider {
+            margin: 0;
+         }
+
+         h2 {
+            text-align: left;
+            font-size: 3.5rem;
+         }
+
+         .cardWrapper {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .card {
+               align-items: flex-start;
+               margin: 1.8rem 0 0 0;
+               width: 300px;
+
+               img {
+                  width: 70px;
+               }
+
+               p {
+                  text-align: left;
+               }
+
+               &:last-child {
+                  margin: 0;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media all and (min-width: 1400px) {
+   .container {
+      .wrapper {
+         max-width: 65%;
+
+         h2 {
+            font-size: 4.5rem;
+         }
+
+         .cardWrapper {
+            .card {
+               width: 350px;
+            }
+         }
+      }
+   }
+}

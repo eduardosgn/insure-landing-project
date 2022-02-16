@@ -1,0 +1,132 @@
+$primaryDarkViolet: hsl(256, 26%, 20%);
+$primaryGrayishBlue: hsl(216, 30%, 68%);
+$neutralVeryDarkViolet: hsl(270, 9%, 17%);
+$neutralDarkGreyishViolet: hsl(273, 4%, 51%);
+$neutralVeryLightGray: hsl(0, 0%, 98%);
+
+.introHeader {
+    background: url(../../public/bg-pattern-intro-left-mobile.svg) no-repeat, url(../../public/bg-pattern-intro-right-mobile.svg) no-repeat bottom right;
+    background-color: $primaryDarkViolet;
+    text-align: center;
+    padding: 6rem 0;
+
+    .wrapper {
+        max-width: 85%;
+        margin: 0 auto;
+
+        .textWrapper {
+            #whiteLine {
+                background-color: $neutralVeryLightGray;
+                width: 150px;
+                height: 2px;
+                display: none;
+            }
+
+            h1 {
+                margin: 0;
+                color: $neutralVeryLightGray;
+                font-size: 3rem;
+            }
+        
+            p {
+                color: $neutralVeryLightGray;
+                margin: 2rem 0;
+                line-height: 1.8;
+                font-size: 1.2rem;
+            }
+        
+            button {
+                text-decoration: none;
+                color: $neutralVeryLightGray;
+                border: 2px solid $neutralVeryLightGray;
+                padding: 1rem 3rem;
+                background: none;
+                cursor: pointer;
+                font-family: 'Karla', sans-serif;
+                transition: all .2s ease-in-out;
+                letter-spacing: 1.5px;
+                font-weight: bold;
+
+                &:hover {
+                    background: $neutralVeryLightGray;
+                    color: $neutralVeryDarkViolet;
+                }
+            }
+        }
+    
+    
+        #familyImg {
+            display: none;
+        }
+    }
+
+}
+
+@media all and (min-width: 1000px) {
+    .introHeader {
+        background: url(../../public/bg-pattern-intro-left-desktop.svg) no-repeat bottom left, url(../../public/bg-pattern-intro-right-desktop.svg) no-repeat top right;
+        background-color: $primaryDarkViolet;
+        padding: 3rem 0;
+
+        .wrapper {
+            max-width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .textWrapper {
+                margin-right: 2rem;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+                #whiteLine {
+                    display: inline-block;
+                    margin-bottom: 2rem;
+                }
+
+                h1 {
+                    font-size: 4rem;
+                    text-align: left;
+                }
+
+                p {
+                    text-align: left;
+                    font-size: 1.1rem;
+                }
+            }
+
+            #familyImg {
+                width: 400px;
+                display: block;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .introHeader {
+        padding: 4rem 0;
+        
+        .wrapper {
+            max-width: 65%;
+
+            .textWrapper {
+                margin-right: 3.5rem;
+
+                #whiteLine {
+                    margin-bottom: 4rem;
+                }
+
+                h1 {
+                    font-size: 5.5rem;
+                }
+            }
+
+            #familyImg {
+                width: 600px;
+            }
+        }
+    }
+}
